@@ -8,6 +8,7 @@ import React from 'react'
 import ProductSingle from "../pages/ProductSingle"
 import GalleryBlog from "../pages/GalleryBlog"
 import BlogSingle from "../pages/BlogSingle"
+import Services from "../pages/Services"
 
 const WebRouting = () => {
     return (
@@ -21,6 +22,7 @@ const WebRouting = () => {
                 <Route path="/products/:slug" element={<ProductSingle />} />
                 <Route path="/gallery-blog" element={<GalleryBlog />} />
                 <Route path="/gallery-blog/blog/:slug" element={<BlogSingle />} />
+                <Route path="/services" element={<Services />} />
             </Routes>
         </>
     )
