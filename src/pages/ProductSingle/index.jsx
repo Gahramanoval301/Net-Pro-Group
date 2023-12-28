@@ -4,8 +4,11 @@ import { Box, Container, Grid, Pagination, Paper, Stack, Typography } from "@mui
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { products } from "../../mockData/products"
-
-
+import * as React from 'react';
+import Divider from '@mui/material/Divider';
+import MenuList from '@mui/material/MenuList';
+import MenuItem from '@mui/material/MenuItem';
+import DevicesCards from "./DevicesCards"
 
 const ProductSingle = () => {
     const [id, setId] = useState(0)
@@ -20,57 +23,61 @@ const ProductSingle = () => {
 
 
     const item = products.find((_item) => _item.id === id)
+    console.log(item);
     return (
         <PageContainer bannerTitle="VERTIV">
-            <Container>
-                <Grid container my={3}>
-                    <Grid xs={12} sm={6} md={4} item>
-                        <Paper elevation={0}
-                            sx={(theme) => ({
-                                borderRadius: 2,
-                                border: `1px solid ${theme.palette.primary.light}`,
-                            })}
-                        >
-                            <Typography
-                                variant="h5"
-                                color="white"
-                                bgcolor="primary.main"
-                            // sx={{
-                            //     borderTopLeftRadius: 'inherit',
-                            //     borderTopRightRadius: 'inherit',
-                            // }}
-                            >Category</Typography>
-                            <Stack>
-                                {
-                                    products.map(({ id, slug, title }) => {
-                                        return (
-                                            <Link key={id} to={`/products/${slug}`}>{title}</Link>
-                                        )
-                                    })
-                                }
-                            </Stack>
+            <Container sx={{py:5}}>
+                <Grid container my={3} spacing={{sm:2,md:1, xl:5}}>
+                    <Grid xs={12}md={4} item>
+                        <Paper sx={{ width: 400, maxWidth: '100%' }}>
+                            <MenuList subheader={
+                                <Paper sx={{ bgcolor: "primary.main", color: 'info.main', p: 3, fontWeight: 600, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, letterSpacing: 1, mb: 2 }}>Caterogy</Paper>
+                            }>
+                                <Stack justifyContent={'space-evenly'} flexWrap={'wrap'}>
+                                    {
+                                        products.map(({ id, slug, title }) => {
+                                            return (
+                                                <>
+                                                    <MenuItem disableRipple disableTouchRipple>
+                                                        <Link key={id} to={`/products/${slug}`} style={{
+                                                            textDecoration: 'none',
+                                                            color: item.id === id ? '#435072' : 'rgba(86, 96, 122, 0.5)', fontWeight: 'bold',
+                                                            padding: 5,
+                                                            width: '100%',
+                                                            textWrap: 'wrap'
+                                                        }}>
+                                                            {title}
+                                                        </Link>
+                                                    </MenuItem>
+                                                    {id !== 5 ?
+                                                        <Divider variant="middle" /> : null}
+                                                </>
+                                            )
+                                        })
+                                    }
+                                </Stack>
+                            </MenuList>
                         </Paper>
                     </Grid>
-                    <Grid xs={12} sm={6} md={8} item>
-                        {
-                            <Typography>{item.title}</Typography>
-                        }
-                        {
-                            item.devices.slice((page - 1) * 3, page * 3).map(({ name }) => {
-                                return (
-                                    <Box py={4} key={name}>
-                                        <Typography>{name}</Typography>
-                                    </Box>
-                                )
-                            })
-                        }
-                        <Pagination
-                            count={item.devices.length / 3}
-                            page={page}
-                            onChange={(_, value) => {
-                                setPage(value)
-                            }}
-                        />
+                    <Grid sm={12} md={8} item >
+                        <Stack justifyContent={'space-between'} flexWrap={'wrap'} spacing={4}>
+                            <Typography variant="h5" color="primary">{item.title}</Typography>
+                            <Typography variant="body1" color="primary">{item.body}</Typography>
+                            {
+                                item.devices.slice((page - 1) * 2, page * 2).map(({ id, name, body, image }) => {
+                                    return (
+                                        <DevicesCards name={name} id={id} body={body} image={image}/>
+                                    )
+                                })
+                            }
+                            <Pagination
+                                count={item.devices.length / 2}
+                                page={page}
+                                onChange={(_, value) => {
+                                    setPage(value)
+                                }}
+                            />
+                        </Stack>
                     </Grid>
                 </Grid>
             </Container>
