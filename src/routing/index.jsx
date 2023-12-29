@@ -9,6 +9,7 @@ import ProductSingle from "../pages/ProductSingle"
 import GalleryBlog from "../pages/GalleryBlog"
 import BlogSingle from "../pages/BlogSingle"
 import Services from "../pages/Services"
+import ServicesSingle from "../pages/ServicesSingle"
 
 const WebRouting = () => {
     return (
@@ -23,6 +24,7 @@ const WebRouting = () => {
                 <Route path="/gallery-blog" element={<GalleryBlog />} />
                 <Route path="/gallery-blog/blog/:slug" element={<BlogSingle />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services/:slug" element={<ServicesSingle />} />
             </Routes>
         </>
     )

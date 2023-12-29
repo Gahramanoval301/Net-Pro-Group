@@ -21,22 +21,15 @@ const theme = createTheme({
         h5: {
             fontWeight: 600
         },
+        h6: {
+            fontWeight: 600
+        },
         body1: {
             fontSize: 20,
             main: '#F4F4F4',
             light: '#FFFFFF'
         },
     },
-    typography: {
-        h4: {
-            fontWeight: 600
-        },
-        h5: {
-            fontWeight: 600
-        },
-        body1: {
-            fontSize: 20
-        }
-    }
+    
 })
 export default theme;
