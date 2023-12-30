@@ -58,13 +58,29 @@ const sections = [
                 route: 'Xidmətlər və Həllər',
             },
             {
-                to: "/services2",
-                route: '2Xidmətlər və Həllər',
+                to: '/services/avadanliqlarin-qurasdirilmasi-və-konfiqurasiyasi',
+                route: "Avadanlıqların quraşdırılması və konfiqurasiyası",
             },
             {
-                to: "/services3",
-                route: '3Xidmətlər və Həllər',
+                to: '/services/daimi-nezaret',
+                route: "Daimi nəzarət",
             },
+            {
+                to: '/services/avadanliqlarin-vaxtinda-dəyisdirilməsi',
+                route: 'Avadanlıqların vaxtında dəyişdirilməsi',
+            },
+            {
+                to: '/services/it-xidmetler',
+                route: 'İT xidmətlər',
+            },
+            {
+                to: '/services/helpdesk-xidmətləri',
+                route: 'Helpdesk xidmətlər',
+            },
+            {
+                to: '/services/təhlukəsizlik-xidmətləri',
+                route: 'Təhlükəsizlik xidmətləri',
+            }
         ]
     },
     {
@@ -84,11 +100,6 @@ export default function Navigation() {
             <Box>
                 <img src="/netProIcons/netProIcon2.png" alt="Net Pro Icon" />
             </Box>
-            {/* for 1020 down */}
-
-
-
-            {/* for 1020px up */}
             <MenuList className={styles.dropdown} >
                 <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ position: 'relative', zIndex: 100 }}>
                     {
