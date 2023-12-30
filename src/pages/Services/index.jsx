@@ -7,7 +7,7 @@ import ServiceCard from '../../components/ServiceCard'
 
 const Services = () => {
     return (
-        <PageContainer bannerTitle='Xidmətlər və Həllər'>
+        <PageContainer bannerTitle='Xidmətlər və Həllər' titleHref='services'>
             <Container sx={{ py: 5 }}>
                 <Stack spacing={3}>
                     <Typography variant="h4" color="primary">
