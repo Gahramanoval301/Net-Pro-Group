@@ -3,8 +3,6 @@ import PageContainer from "../../components/PageContainer"
 import { Container, Box, Typography, Stack, Grid } from '@mui/material'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -12,7 +10,7 @@ import styles from './style.module.css'
 const Contact = () => {
     return (
         <div>
-            <PageContainer bannerTitle="Əlaqə">
+            <PageContainer bannerTitle="Əlaqə" titleHref="contact">
                 <Container sx={{ py: 4 }}>
                     <Grid container>
                         <Grid item sx={12} sm={5}>
