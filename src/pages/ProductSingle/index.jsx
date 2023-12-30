@@ -25,7 +25,7 @@ const ProductSingle = () => {
     const item = products.find((_item) => _item.id === id)
     console.log(item);
     return (
-        <PageContainer bannerTitle="VERTIV">
+        <PageContainer bannerTitle="VERTIV" titleHref={''} slug={slug} slugTitle={item.title}>
             <Container sx={{py:5}}>
                 <Grid container my={3} spacing={{sm:2,md:1, xl:5}}>
                     <Grid xs={12}md={4} item>
