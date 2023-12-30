@@ -5,7 +5,13 @@
   padding: 2rem 0;
   flex-direction: row;
 }
-
+.menu{
+  height: 300px;
+  overflow-y: scroll;
+}
+.menu::-webkit-scrollbar{
+  display: none;
+}
 @media screen and (max-width: 1020px) {
   .dropdown{
     display: none !important;
