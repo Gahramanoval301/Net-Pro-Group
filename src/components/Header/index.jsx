@@ -35,114 +35,124 @@ export function Header() {
         setCountry(e.target.value);
     };
     return (
-    
-            <Box sx={{ flexGrow: 1, textAlign: 'center', position: 'sticky', top: 0, zIndex: 1000 }} >
-                <AppBar position="static"
-                    sx={{
-                        ".MuiToolbar-root": {
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            alignItems: 'center',
-                        }
-                    }}
-                >
-                    <Toolbar sx={{ flexDirection: { xs: 'column', md: 'row' }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', padding: '1rem 0', gap: 1 }}>
-                        <Box>
-                            <Typography variant="body1" component="p" sx={{ display: 'flex', justifyContent: 'flex-start', marginRight: 1 }}>
-                                <LocationOnIcon />
-                                Fəzail Bayramov küç., 1156, Xətai ray., Bakı, Azərbaycan, AZ1025</Typography>
+
+        <Box sx={{ flexGrow: 1, textAlign: 'center', position: 'sticky', top: 0, zIndex: 1000 }} >
+            <AppBar position="static"
+                sx={{
+                    ".MuiToolbar-root": {
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        alignItems: 'center',
+                    }
+                }}
+            >
+                <Toolbar sx={{ flexDirection: { xs: 'column', md: 'row' }, display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', padding: '1rem 0', gap: 1 }}>
+                    <Box>
+                        <a href="https://go.2gis.com/0e49l" style={{ color: 'white', textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <LocationOnIcon sx={{ marginRight: 1 }} />
+                            Fəzail Bayramov küç., 1156, Xətai ray., Bakı, Azərbaycan, AZ1025
+                        </a>
+                    </Box>
+                    <Box>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap:'wrap' }}>
+                            < WhatsAppIcon sx={{ marginRight: 1 }} />
+                            <a href="tel:+994505754080" style={{ color: 'white', textDecoration: 'none', marginRight: 10 }}>+994505754080</a>
+                            <a href="tel:+994505754070" style={{ color: 'white', textDecoration: 'none' }}>+994505754070</a>
                         </Box>
-                        <Box>
-                            <Typography variant="body1" component="p" sx={{ display: 'flex', justifyContent: 'flex-start', marginRight: 1 }}>
-                                < WhatsAppIcon />
-                                +99450 5754080 +99450 5754070
-                            </Typography>
-                        </Box>
-                        <Box>
-                            <Typography variant="body1" component="p" sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-                                < MailIcon />
-                                info@netprogroup.az
-                            </Typography>
-                        </Box>
-                        <Stack gap={0.7} flexDirection="row" sx={{ mx: 1 }}>
+                    </Box>
+                    <Box>
+                        <a href="mailto:info@netprogroup.az" style={{ color: 'white', textDecoration: 'none', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            < MailIcon sx={{ marginRight: 1 }} />
+                            info@netprogroup.az
+                        </a>
+                    </Box>
+                    <Stack gap={0.7} flexDirection="row" sx={{ mx: 1 }}>
+                        <a href="https://www.facebook.com/?locale=az_AZ" style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <FacebookIcon sx={{ border: '1px solid white', borderRadius: 0.5, boxSizing: 'content-box', padding: 0.3 }} />
+                        </a>
+                        <a href="https://www.linkedin.com/in/leman-gahramanova-3871a42a7/" style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <LinkedInIcon sx={{ border: '1px solid white', borderRadius: 0.5, boxSizing: 'content-box', padding: 0.3 }} />
+                        </a>
+                        <a href="" style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <InstagramIcon sx={{ border: '1px solid white', borderRadius: 0.5, boxSizing: 'content-box', padding: 0.3 }} />
+                        </a>
+                        <a href="" style={{ color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                             <WhatsAppIcon sx={{ border: '1px solid white', borderRadius: 0.5, boxSizing: 'content-box', padding: 0.3 }} />
-                        </Stack>
-                        <FormControl sx={{
-                            minWidth: 120, "& fieldset": {
-                                border: '1px solid white !important',
-                                outline: "none",
-                            },
-                        }}>
-                            <Select
-                                sx={{
-                                    ".MuiSelect-select": {
-                                        py: "10px !important",
-                                    },
-                                    "& svg": {
-                                        color: "white"
-                                    },
-                                    color: 'white',
-                                    border: 'none',
-                                    outline: 'none',
-                                    margin: '0 0.5rem'
+                        </a>
+                    </Stack>
+                    <FormControl sx={{
+                        minWidth: 120, "& fieldset": {
+                            border: '1px solid white !important',
+                            outline: "none",
+                        },
+                    }}>
+                        <Select
+                            sx={{
+                                ".MuiSelect-select": {
+                                    py: "10px !important",
+                                },
+                                "& svg": {
+                                    color: "white"
+                                },
+                                color: 'white',
+                                border: 'none',
+                                outline: 'none',
+                                margin: '0 0.5rem'
 
-                                }}
+                            }}
 
-                                value={money}
-                                onChange={handleChange}
-                                displayEmpty
-                                inputProps={{ 'aria-label': 'Without label' }}
-                                IconComponent={() => <ArrowDownward color="white" style={{ cursor: 'pointer', position: 'relative', right: 5 }} />}
-                            >
-                                <MenuItem value=""> 1 USD - 1.700 AZN ⏺️</MenuItem>
-                                <MenuItem value={10}>lorem</MenuItem>
-                                <MenuItem value={20}>lorem</MenuItem>
-                                <MenuItem value={30}>lorem</MenuItem>
-                            </Select>
-                        </FormControl>
-                        <FormControl sx={{
-                            "& fieldset": {
-                                border: 'none !important',
-                                outline: "none",
-                            },
-                            minWidth: 120,
-                        }}>
-                            <Select
-                                sx={{
-                                    ".MuiSelect-select": {
-                                        py: "10px !important"
-                                    },
-                                    "& svg": {
-                                        color: "white"
-                                    },
-                                    color: 'white',
-                                    border: 'none',
-                                    outline: 'none',
+                            value={money}
+                            onChange={handleChange}
+                            displayEmpty
+                            inputProps={{ 'aria-label': 'Without label' }}
+                            IconComponent={() => <ArrowDownward color="white" style={{ cursor: 'pointer', position: 'relative', right: 5 }} />}
+                        >
+                            <MenuItem value=""> 1 USD - 1.700 AZN ⏺️</MenuItem>
+                            <MenuItem value={10}>lorem</MenuItem>
+                            <MenuItem value={20}>lorem</MenuItem>
+                            <MenuItem value={30}>lorem</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <FormControl sx={{
+                        "& fieldset": {
+                            border: 'none !important',
+                            outline: "none",
+                        },
+                        minWidth: 120,
+                    }}>
+                        <Select
+                            sx={{
+                                ".MuiSelect-select": {
+                                    py: "10px !important"
+                                },
+                                "& svg": {
+                                    color: "white"
+                                },
+                                color: 'white',
+                                border: 'none',
+                                outline: 'none',
 
 
-                                }}
-                                IconComponent={() => <ArrowDropDownIcon color="white" style={{ cursor: 'pointer' }} />}
-                                value={country}
-                                onChange={handleChange2}
-                                displayEmpty
-                                inputProps={{ 'aria-label': 'Without label' }}
-                            >
-                                <MenuItem value="">AZ</MenuItem>
-                                <MenuItem value={10}>RUS</MenuItem>
-                                <MenuItem value={20}>ENG </MenuItem>
-                                <MenuItem value={30}>UK</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Toolbar>
-                </AppBar>
-                <Box sx={{ bgcolor: '#F4F4F4' }}>
-                    <Container >
-                        <Navigation />
-                    </Container>
-                </Box>
+                            }}
+                            IconComponent={() => <ArrowDropDownIcon color="white" style={{ cursor: 'pointer' }} />}
+                            value={country}
+                            onChange={handleChange2}
+                            displayEmpty
+                            inputProps={{ 'aria-label': 'Without label' }}
+                        >
+                            <MenuItem value="">AZ</MenuItem>
+                            <MenuItem value={10}>RUS</MenuItem>
+                            <MenuItem value={20}>ENG </MenuItem>
+                            <MenuItem value={30}>UK</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Toolbar>
+            </AppBar>
+            <Box sx={{ bgcolor: '#F4F4F4' }}>
+                <Container >
+                    <Navigation />
+                </Container>
             </Box>
+        </Box>
     );
 }
