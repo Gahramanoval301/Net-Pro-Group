@@ -5,7 +5,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 const About = () => {
 
     return (
-        <PageContainer bannerTitle='Haqqımızda'>
+        <PageContainer bannerTitle='Haqqımızda' titleHref='about'>
             <Container>
                 <Grid container py={6} spacing={2}>
                     <Grid item xs={12} md={6}
