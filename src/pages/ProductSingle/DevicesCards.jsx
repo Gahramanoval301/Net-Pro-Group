@@ -2,10 +2,11 @@ import React from 'react'
 import { Box, Grid, Link, Stack, Typography, Divider, CardActions, Icon } from "@mui/material"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import styles from './index.module.css'
-const DevicesCards = ({ id, name, body, image }) => {
+const DevicesCards = ({ name, body, image }) => {
     return (
-        <Card key={id} sx={{
+        <Card sx={{
             display: 'flex',
             padding: '20px',
             borderRadius: '8px',
@@ -57,7 +58,7 @@ const DevicesCards = ({ id, name, body, image }) => {
                     <Box sx={{
                         display: 'flex', fontSize: '16px'
                     }}>
-                        <Icon baseClassName="fas" className="fa-file-pdf" color='primary' />
+                        <PictureAsPdfIcon color='primary' />
                         <Link href="#" underline="always" color={'primary'}>
                             Brochure.pdf
                         </Link>
