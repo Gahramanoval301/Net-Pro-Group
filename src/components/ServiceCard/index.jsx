@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ title, body, image, slug }) => {
     return <Grid item xs={12} sm={6} md={4}>
-        <Link className={styles.link} to={`/services/${slug}`}>
+        <Link className={styles.link} to={`/xidmətlər-və-həllər/${slug}`}>
             <Card className={styles.card}>
                 < CardMedia
                     component="img"
