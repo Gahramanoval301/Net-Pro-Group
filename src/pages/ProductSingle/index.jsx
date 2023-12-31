@@ -24,7 +24,7 @@ const ProductSingle = () => {
     const item = products.find((_item) => _item.id === id)
 
     return (
-        <PageContainer bannerTitle="VERTIV" titleHref={''} slug={slug} slugTitle={item.title}>
+        <PageContainer bannerTitle="VERTIV" titleHref={'məhsullar'} slug={slug} slugTitle={item.title}>
             <Container sx={{ py: 5 }}>
                 <Grid container my={3} spacing={{ xs: 1, md: 2, xl: 3 }}>
                     <Grid xs={12} md={4} item>
