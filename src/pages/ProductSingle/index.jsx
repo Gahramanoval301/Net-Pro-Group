@@ -21,25 +21,30 @@ const ProductSingle = () => {
         setPage(1)
     }, [slug])
 
-
     const item = products.find((_item) => _item.id === id)
-    console.log(item);
+
     return (
         <PageContainer bannerTitle="VERTIV" titleHref={''} slug={slug} slugTitle={item.title}>
-            <Container sx={{py:5}}>
-                <Grid container my={3} spacing={{sm:2,md:1, xl:5}}>
-                    <Grid xs={12}md={4} item>
+            <Container sx={{ py: 5 }}>
+                <Grid container my={3} spacing={{ xs: 1, md: 2, xl: 3 }}>
+                    <Grid xs={12} md={4} item>
                         <Paper sx={{ width: 400, maxWidth: '100%' }}>
                             <MenuList subheader={
-                                <Paper sx={{ bgcolor: "primary.main", color: 'info.main', p: 3, fontWeight: 600, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, letterSpacing: 1, mb: 2 }}>Caterogy</Paper>
+                                <Paper sx={{
+                                    bgcolor: "primary.main",
+                                    color: 'info.main', p: 3, fontWeight: 600,
+                                    borderBottomLeftRadius: 0,
+                                    borderBottomRightRadius: 0,
+                                    letterSpacing: 1, mb: 2
+                                }}>Caterogy</Paper>
                             }>
                                 <Stack justifyContent={'space-evenly'} flexWrap={'wrap'}>
                                     {
                                         products.map(({ id, slug, title }) => {
                                             return (
-                                                <>
+                                                <Box key={id}>
                                                     <MenuItem disableRipple disableTouchRipple>
-                                                        <Link key={id} to={`/products/${slug}`} style={{
+                                                        <Link to={`/məhsullar/${slug}`} style={{
                                                             textDecoration: 'none',
                                                             color: item.id === id ? '#435072' : 'rgba(86, 96, 122, 0.5)', fontWeight: 'bold',
                                                             padding: 5,
@@ -51,7 +56,7 @@ const ProductSingle = () => {
                                                     </MenuItem>
                                                     {id !== 5 ?
                                                         <Divider variant="middle" /> : null}
-                                                </>
+                                                </Box>
                                             )
                                         })
                                     }
@@ -66,7 +71,7 @@ const ProductSingle = () => {
                             {
                                 item.devices.slice((page - 1) * 2, page * 2).map(({ id, name, body, image }) => {
                                     return (
-                                        <DevicesCards name={name} id={id} body={body} image={image}/>
+                                        <DevicesCards key={id} name={name} body={body} image={image} />
                                     )
                                 })
                             }
