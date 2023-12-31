@@ -8,18 +8,13 @@ import MenuList from '@mui/material/MenuList';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 const DropdownItem = ({ section, subRoutes = [], to }) => {
-    const [dropdown, setDropdown] = useState(false)
-
-    function handleToggle() {
-        setDropdown(true)
-    }
 
     return (
         <>
-            <MenuItem component='a' href={to} onMouseOver={handleToggle}>
+            <MenuItem component='a' href={to} sx={{textWrap:'wrap'}}>
                 <ListItemIcon>
                     <NavigateNextIcon fontSize="small"
-                        s sx={{ color: 'primary.main' }} />
+                        sx={{ color: 'primary.main' }} />
                 </ListItemIcon>
                 <ListItemText>{section}</ListItemText>
 
@@ -36,12 +31,11 @@ const DropdownItem = ({ section, subRoutes = [], to }) => {
             {
                 subRoutes.length ?
                     <MenuList>
-                        {dropdown ? subRoutes.map(({ route, to }, index) => {
+                        {subRoutes.map(({ route, to }, index) => {
                             return (
                                 <MenuItem component='a' href={to} key={index}
-                                    sx={{
-                                        textWrap: 'wrap'
-                                    }}>
+                                sx={{textWrap:'wrap'}}
+                                    >
                                     <ListItemIcon>
                                         <Link fontSize="small" sx={{
                                             color: 'primary.main'
@@ -50,7 +44,7 @@ const DropdownItem = ({ section, subRoutes = [], to }) => {
                                     <ListItemText>{route}</ListItemText>
                                 </MenuItem>
                             )
-                        }) : null}
+                        })}
                     </MenuList>
                     : null
             }
