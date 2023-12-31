@@ -9,11 +9,11 @@ import styles from './index.module.css'
 
 const links = [
     { title: "Əsas səhifə", to: '/' },
-    { title: "Haqqımızda", to: '/about' },
-    { title: "Məhsullar", to: '/products' },
-    { title: "Xidmətlər və Həllər", to: '/services' },
-    { title: "Qalereya və Bloq", to: '/blog' },
-    { title: "Əlaqə", to: '/contact' }
+    { title: "Haqqımızda", to: '/haqqımızda' },
+    { title: "Məhsullar", to: '/məhsullar' },
+    { title: "Xidmətlər və Həllər", to: '/xidmətlər-və-həllər' },
+    { title: "Qalereya və Bloq", to: '/bloq' },
+    { title: "Əlaqə", to: '/əlaqə' }
 ]
 const Footer = () => {
     return (
