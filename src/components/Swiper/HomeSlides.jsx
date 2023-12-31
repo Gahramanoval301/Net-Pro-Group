@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 
 export const HomeSlides = home1stsections.map(({ id, image, title }) => {
     return <SwiperSlide style={{
-        backgroundImage: `url("/${image}")`,
+        backgroundImage: `url("${image}")`,
         backgroundSize: `cover`,
         width: '100%',
     }} key={id}>
@@ -40,7 +40,3 @@ export const HomeSlides = home1stsections.map(({ id, image, title }) => {
     </SwiperSlide >
 
 })
-
-
-
-
