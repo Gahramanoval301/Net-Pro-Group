@@ -33,7 +33,7 @@ const ServicesSingle = () => {
                                 {services.map(({ id, title, slug }, index) => {
                                     return (
                                         <Fragment key={id}>
-                                            <Link to={`/services/${slug}`} style={{
+                                            <Link to={`/xidmətlər-və-həllər/${slug}`} style={{
                                                 textDecoration: 'none',
                                                 color: service.slug === slug ? '#435072' : 'rgba(67, 80, 114, 0.5)',
                                                 py: 1

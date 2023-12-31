@@ -22,8 +22,8 @@ const WebRouting = () => {
                 <Route path="/məhsullar/:slug" element={<ProductSingle />} />
                 <Route path="/qaleriya-bloq" element={<GalleryBlog />} />
                 <Route path="/qaleriya-bloq/bloq/:slug" element={<BlogSingle />} />
-                <Route path="/xidmətlər-və-həller" element={<Services />} />
-                <Route path="/xidmətlər-və-həller/:slug" element={<ServicesSingle />} />
+                <Route path="/xidmətlər-və-həllər" element={<Services />} />
+                <Route path="/xidmətlər-və-həllər/:slug" element={<ServicesSingle />} />
                 <Route path="*" element={<NotFound />} />
 
             </Routes>
