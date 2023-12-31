@@ -8,91 +8,15 @@ import * as React from 'react';
 import { useState } from 'react';
 import NavItem from './NavItem';
 import MenuIcon from '@mui/icons-material/Menu';
-import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import DropdownItem from './DropdownItem';
 import styles from './index.module.css'
-const sections = [
-    {
-        to: "/",
-        route: 'Əsas səhifə'
-    },
-    {
-        to: "/about",
-        route: 'Haqqımızda'
-    },
-    {
-        route: 'Məhsullar',
-        subRoutes: [
-            {
-                to: "/products/uninterruptible-power-supplies",
-                route: 'Uninterruptible Power Supplies',
-            },
-            {
-                to: "/products/dc-power-systems",
-                route: 'DC Power Systems',
-            },
-            {
-                to: "/products/power-distribution",
-                route: 'Power Distribution',
-            },
-            {
-                to: "/products/industrial-ac-and-dc-systems",
-                route: 'Industrial AC and DC Systems',
-            },
-            {
-                to: "/products/static-transfer-switches",
-                route: 'Static Transfer Switches',
-            },
-            {
-                to: "/products/power-control-and-monitoring",
-                route: 'Power Control and Monitoring',
-            },
-        ]
-    },
-    {
-        route: 'Xidmətlər və Həllər',
-        subRoutes: [
-            {
-                to: "/services",
-                route: 'Xidmətlər və Həllər',
-            },
-            {
-                to: '/services/avadanliqlarin-qurasdirilmasi-və-konfiqurasiyasi',
-                route: "Avadanlıqların quraşdırılması və konfiqurasiyası",
-            },
-            {
-                to: '/services/daimi-nezaret',
-                route: "Daimi nəzarət",
-            },
-            {
-                to: '/services/avadanliqlarin-vaxtinda-dəyisdirilməsi',
-                route: 'Avadanlıqların vaxtında dəyişdirilməsi',
-            },
-            {
-                to: '/services/it-xidmetler',
-                route: 'İT xidmətlər',
-            },
-            {
-                to: '/services/helpdesk-xidmətləri',
-                route: 'Helpdesk xidmətlər',
-            },
-            {
-                to: '/services/təhlukəsizlik-xidmətləri',
-                route: 'Təhlükəsizlik xidmətləri',
-            }
-        ]
-    },
-    {
-        to: "/contact",
-        route: 'Əlaqə'
-    },
-]
+import { sections } from './sections';
+
 export default function Navigation() {
     const [toggle, setToggle] = useState(false)
     function toggleBtn() {
         setToggle(!toggle)
-        console.log(toggle);
     }
 
     return (
@@ -124,9 +48,19 @@ export default function Navigation() {
                     aria-label="menu">
                     <SearchIcon />
                 </IconButton>
-                <IconButton className={styles.dropBtn} aria-label="menu" size="large" color='primary' sx={{ display: 'none', position: 'relative' }} onClick={toggleBtn}>
+                <IconButton className={styles.dropBtn}
+                    aria-label="menu"
+                    size="large"
+                    color='primary'
+                    onClick={toggleBtn}
+                    sx={{
+                        display: 'none', position: 'relative'
+                    }} >
                     <MenuIcon fontSize="inherit" />
-                    {toggle ? <Paper className={styles.menu} sx={{ width: 320, position: 'absolute', right: 50, top: 20, zIndex: 200 }}>
+                    {toggle ? <Paper className={styles.menu}
+                        sx={{
+                            width: 320, position: 'absolute', right: 50, top: 20, zIndex: 200
+                        }}>
                         <MenuList>
                             {sections.map(({ route, subRoutes, to }, index) => {
                                 return (

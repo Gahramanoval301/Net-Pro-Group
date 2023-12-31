@@ -15,7 +15,10 @@ const ServicesSingle = () => {
     const service = services.find(service => service.slug === slug)
 
     return (
-        <PageContainer bannerTitle='Xidmətlər və Həllər' titleHref='services' slugTitle={service.title} slug={service.slug}>
+        <PageContainer bannerTitle='Xidmətlər və Həllər'
+         titleHref='xidmətlər-və-həllər' 
+         slugTitle={service.title}
+          slug={service.slug}>
             <Container sx={{ py: 5 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={4}>

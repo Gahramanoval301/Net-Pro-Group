@@ -42,8 +42,14 @@ export default function ProducsSwiper() {
             , minHeight: '90vh', padding: '1.5rem 0'
         }}>
             <Container maxWidth="lg">
-                <Typography variant="h3" component='h1' color="initial" sx={{ textAlign: 'center', fontWeight: 600, color: 'info.main' }}>Məhsullar</Typography>
-                <Swiper style={{ position: 'relative', margin: '1.5rem 0' }}
+                <Typography variant="h3" component='h3' color="initial" sx={{
+                    textAlign: 'center', fontWeight: 600, color: 'info.main'
+                }}>
+                    Məhsullar
+                </Typography>
+                <Swiper style={{
+                    position: 'relative', margin: '1.5rem 0'
+                }}
                     onRealIndexChange={({ realIndex }) => {
                         setRealIndex(realIndex + 1)
                     }}
@@ -56,17 +62,24 @@ export default function ProducsSwiper() {
                     breakpoints={breakpoints}
                     spaceBetween={30}
                     centeredSlides={true}
-                    // pagination={{
-                    //     clickable: true,
-                    // }}
                     modules={[Pagination, Navigation]}
                     className="mySwiper ProductsSwiper"
                 >
-                    <Stack flexDirection={'row'} flexWrap={'wrap'} justifyContent={'space-between'} alignItems={'center'} className={styles.btnGroup}>
-                        <Button color='info' ref={prevRef} sx={{ top: '35%', left: { xs: '3%', md: '12%' } }} >
+                    <Stack flexDirection={'row'}
+                        flexWrap={'wrap'}
+                        justifyContent={'space-between'}
+                        alignItems={'center'}
+                        className={styles.btnGroup}>
+                        <Button color='info' ref={prevRef}
+                            sx={{
+                                top: '35%', left: { xs: '3%', md: '12%' }
+                            }} >
                             <ArrowBackIcon sx={{ color: 'white' }} />
                         </Button>
-                        <Button color='info' ref={nextRef} sx={{ top: '35%', right: { xs: '3%', md: '12%' } }}>
+                        <Button color='info' ref={nextRef}
+                            sx={{
+                                top: '35%', right: { xs: '3%', md: '12%' }
+                            }}>
                             <ArrowForwardIcon sx={{ color: 'white' }} />
                         </Button>
                     </Stack>

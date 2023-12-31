@@ -19,19 +19,31 @@ const BlogSingle = () => {
                 <Grid container sx={{ py: 3 }} spacing={2}>
                     <Grid item xs={12} md={6} lg={7}>
                         <Box my={1}>
-                            <Breadcumb breadcumb={item.title}/>
+                            <Breadcumb breadcumb={item.title} />
                         </Box>
-                        <Box style={{width:'100%'}}>
-                            <img src="/BlogSingleSource/Main.png" alt="blog main page" style={{width:'100%'}}/>
+                        <Box style={{ width: '100%' }}>
+                            <img src="/BlogSingleSource/Main.png"
+                                alt="blog main page"
+                                style={{ width: '100%' }} />
                         </Box>
-                        <Stack flexDirection={'row'} justifyContent={'space-between'} sx={{mt:1 }} >
-                            <Box sx={{ display: 'flex', flexFlow: 'row wrap', gap: 1, justifyContent: 'flex-start' }}>
+                        <Stack flexDirection={'row'} justifyContent={'space-between'}
+                            sx={{ mt: 1 }} >
+                            <Box sx={{
+                                display: 'flex',
+                                flexFlow: 'row wrap',
+                                gap: 1, justifyContent: 'flex-start'
+                            }}>
                                 <QueryBuilderIcon fontSize='small' color='secondary' />
                                 <Typography variant="body2" color="text.secondary">
                                     05.02.2022
                                 </Typography>
                             </Box>
-                            <Box sx={{ display: 'flex', flexFlow: 'row wrap', gap: 1, justifyContent: 'flex-start' }}>
+                            <Box sx={{
+                                display: 'flex',
+                                flexFlow: 'row wrap',
+                                gap: 1,
+                                justifyContent: 'flex-start'
+                            }}>
                                 <VisibilityOutlinedIcon fontSize='small' color='secondary' />
                                 <Typography variant="body2" color="text.secondary">
                                     Baxış sayı: 20
@@ -51,18 +63,20 @@ const BlogSingle = () => {
                     <Grid item xs={12} md={6} lg={5}>
                         <Stack spacing={5}>
                             <Box>
-                                <Typography variant="h5" color="primary" sx={{ mb: 2 }}>Son məqalələr</Typography>
+                                <Typography variant="h5" color="primary" sx={{ mb: 2 }}>
+                                    Son məqalələr</Typography>
                                 <Stack spacing={2}>
                                     {articles.map(({ id, image, body }) => {
-                                        return <ArticleCards id={id} image={image} body={body} />
+                                        return <ArticleCards id={id} key={id} image={image} body={body} />
                                     })}
                                 </Stack>
                             </Box>
                             <Box>
-                                <Typography variant="h5" color="primary" sx={{ mb: 2 }}>Populyar məqalələr</Typography>
+                                <Typography variant="h5" color="primary" sx={{ mb: 2 }}>
+                                    Populyar məqalələr</Typography>
                                 <Stack spacing={2}>
                                     {articles.map(({ id, image, body }) => {
-                                        return <ArticleCards id={id} image={image} body={body} />
+                                        return <ArticleCards key={id} id={id} image={image} body={body} />
                                     })}
                                 </Stack>
                             </Box>

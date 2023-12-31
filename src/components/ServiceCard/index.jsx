@@ -19,13 +19,15 @@ const ServiceCard = ({ title, body, image, slug }) => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h6"
-                        sx={{ minHeight: { xs: '10px', sm: '90px', lg: '60px' } }}
+                        sx={{
+                            minHeight: { xs: '10px', sm: '90px', lg: '60px' }
+                        }}
                         component="h6"
                         color='primary'>
                         {title}
                     </Typography>
                     <Divider sx={{ my: 3 }} />
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography color="text.secondary">
                         {body}
                     </Typography>
                 </CardContent>

@@ -1,0 +1,9 @@
+.container {
+  color: white;
+}
+.container .icon {
+  border: 1px solid white;
+  border-radius: 0.5px;
+  box-sizing: content-box;
+  padding: 0.3px;
+}

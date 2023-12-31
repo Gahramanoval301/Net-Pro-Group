@@ -32,13 +32,34 @@ export default function Gallery() {
 
     return (
         <Container sx={{ py: 3 }}>
-            <Stack flexDirection={'row'} justifyContent={'space-between'} flexWrap={'wrap'} spacing={1} sx={{ my: 2 }}>
-                <Typography variant="h4" color="primary.main" sx={{ fontWeight: 600 }}>Qalereya</Typography>
-                <Stack flexDirection={'row'} justifyContent={'flex-end'} flexWrap={'wrap'} sx={{ gap: '10px' }} >
-                    <Button variant="outlined" ref={prevRef} sx={{ boxShadow: 'none', minWidth: '30px', padding: 1 }}>
+            <Stack flexDirection={'row'}
+                justifyContent={'space-between'}
+                flexWrap={'wrap'}
+                spacing={1
+                } sx={{ my: 2 }}>
+                <Typography variant="h4"
+                    component='h4'
+                    color="primary"
+                    sx={{ fontWeight: 600 }}>
+                    Qalereya
+                </Typography>
+                <Stack
+                    flexDirection={'row'}
+                    justifyContent={'flex-end'}
+                    flexWrap={'wrap'}
+                    sx={{ gap: '10px' }} >
+                    <Button variant="outlined"
+                        ref={prevRef}
+                        sx={{
+                            boxShadow: 'none', minWidth: '30px', padding: 1
+                        }}>
                         <WestIcon />
                     </Button>
-                    <Button variant="outlined" ref={nextRef} sx={{ boxShadow: 'none', minWidth: '30px', padding: 1 }}>
+                    <Button variant="outlined"
+                        ref={nextRef}
+                        sx={{
+                            boxShadow: 'none', minWidth: '30px', padding: 1
+                        }}>
                         <EastIcon />
                     </Button>
                 </Stack>
@@ -59,9 +80,7 @@ export default function Gallery() {
                 modules={[Pagination, Mousewheel, Navigation]}
                 style={{ marginBlock: '2rem' }}
             >
-
                 {GallerySlides}
-
             </Swiper>
         </Container>
     );

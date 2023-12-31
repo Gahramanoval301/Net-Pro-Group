@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
 // import required modules
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
 import { Box, Button, Stack, Container } from '@mui/material';

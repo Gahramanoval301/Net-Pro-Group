@@ -20,7 +20,10 @@ const SwiperSliders = products.map(({ id, img, body, title }) => {
 
             </Box>
             <Box sx={{}}>
-                <ProductSections id={id} title={title} body={body} />
+                <ProductSections
+                    id={id}
+                    title={title}
+                    body={body} />
             </Box>
         </SwiperSlide>
     )

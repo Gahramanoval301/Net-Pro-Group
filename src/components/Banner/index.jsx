@@ -1,45 +1,32 @@
 import { Box, Container, Typography } from "@mui/material"
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import WhatshotIcon from '@mui/icons-material/Whatshot';
-import GrainIcon from '@mui/icons-material/Grain';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { Link } from "react-router-dom";
+import styles from './index.module.css'
 
-const PageBanner = ({ title, titleHref='', slug, slugTitle='' }) => {
+const PageBanner = ({ title, titleHref = '', slug, slugTitle = '' }) => {
     return (
-        <Box bgcolor="primary.main" py={4}
+        <Box className={styles.containerBox} bgcolor="primary.main" py={4}
             sx={{
                 backgroundImage: `url("/banner-bg.png")`,
                 backgroundSize: 'cover',
                 backgroundBlendMode: "multiply"
             }}
         >
-            <Container sx={{
-                display:'flex',
-                flexDirection:'column',
-                justifyContent:'center',
-                alignItems:'center',
-                color: 'white'
-            }}>
-                <Typography fontWeight={600} mb={3} variant="h4">{title}</Typography>
+            <Container className={styles.container}>
+                <Typography fontWeight={600} mb={3} variant="h4" component='h4'>
+                    {title}
+                </Typography>
                 <Breadcrumbs aria-label="breadcrumb" separator=''>
-                    <Link
-                        style={{ display: 'flex', alignItems: 'center', color:'white', textDecoration:'none' }}
-                        to='/'
-                    >
+                    <Link className={styles.link} to='/'>
                         Əsas səhifə
                     </Link>
-                    <Link
-                        style={{ display: 'flex', alignItems: 'center', color:'white', textDecoration:'none' }}
-                        to={`/${titleHref}`}
-                    >
-                        <PlayArrowIcon sx={{ mr: 2 , color:'white'}} />
+                    <Link className={styles.link} to={`/${titleHref}`}>
+                        <PlayArrowIcon sx={{ mr: 2, color: 'white' }} />
                         {title}
                     </Link>
                     {
-                        slug ? <Link
-                            style={{ display: 'flex', alignItems: 'center', color:'white', textDecoration:'none' }}
-                            to={`/${titleHref}/${slug}`}
+                        slug ? <Link className={styles.link} to={`/${titleHref}/${slug}`}
                         >
                             <PlayArrowIcon sx={{ mr: 2 }} />
                             {slugTitle}

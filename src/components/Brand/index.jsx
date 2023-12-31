@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Container, Grid, Typography, Stack } from "@mui/material"
+import styles from './index.module.css'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,7 +15,11 @@ import Logo from './Logo';
 export const Brands = () => {
     const [init, setInit] = useState(false)
     return (
-        <Box className="brands-swiper" bgcolor={'primary.main'} sx={{ backgroundPosition: 'cover', position: 'relative', padding: '1.5rem 0' }} >
+        <Box className="brands-swiper"
+            bgcolor={'primary.main'}
+            sx={{
+                backgroundPosition: 'cover', position: 'relative', padding: '1.5rem 0'
+            }} >
             <img src='../../../public/brandsHome/bgBrands.png' alt="img" style={{
                 opacity: '0.3',
                 position: 'absolute',
@@ -23,14 +28,21 @@ export const Brands = () => {
                 width: '100%',
                 height: '100%'
             }} />
-            <Container>
+            <Container className={styles.container}>
                 <Grid container>
                     <Grid item xs={12} md={3} sx={{ padding: '0.5rem' }}>
-                        <Typography variant='h3' component='h1' color='info.main' sx={{ fontWeight: 600 }}>
+                        <Typography variant='h3' component='h3'
+                            color='info.main'
+                            sx={{
+                                fontWeight: 600
+                            }}>
                             Brendlər
                         </Typography >
                     </Grid>
-                    <Grid item xs={12} md={9} sx={{ position: 'relative', padding: '1rem' }} >
+                    <Grid item xs={12} md={9}
+                        sx={{
+                            position: 'relative', padding: '1rem'
+                        }} >
 
                         <Swiper
                             loop
@@ -46,21 +58,21 @@ export const Brands = () => {
                             className="mySwiper"
                         >
                             <SwiperSlide>
-                                <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '2rem', justifyContent: 'center', alignItems: 'center' }} >
+                                <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
                                     <Logo image={'../../../public/brandsHome/brandsLogo1.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo2.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo3.png'} />
                                 </Stack>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '2rem', justifyContent: 'center', alignItems: 'center' }} >
+                                <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
                                     <Logo image={'../../../public/brandsHome/brandsLogo4.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo5.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo6.png'} />
                                 </Stack>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '2rem', justifyContent: 'center', alignItems: 'center' }} >
+                                <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
                                     <Logo image={'../../../public/brandsHome/brandsLogo7.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo8.png'} />
                                     <Logo image={'../../../public/brandsHome/brandsLogo9.webp'} />

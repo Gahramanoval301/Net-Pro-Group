@@ -10,21 +10,22 @@ import GalleryBlog from "../pages/GalleryBlog"
 import BlogSingle from "../pages/BlogSingle"
 import Services from "../pages/Services"
 import ServicesSingle from "../pages/ServicesSingle"
+import NotFound from "../pages/NotFound"
 
 const WebRouting = () => {
     return (
         <>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/icon" element={<NetProIcon />} />
-                <Route path="/homecustomers" element={<HomeCustomers />} />
-                <Route path="/products/:slug" element={<ProductSingle />} />
-                <Route path="/gallery-blog" element={<GalleryBlog />} />
-                <Route path="/gallery-blog/blog/:slug" element={<BlogSingle />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:slug" element={<ServicesSingle />} />
+                <Route path="/haqqımızda" element={<About />} />
+                <Route path="/əlaqə" element={<Contact />} />
+                <Route path="/məhsullar/:slug" element={<ProductSingle />} />
+                <Route path="/qaleriya-bloq" element={<GalleryBlog />} />
+                <Route path="/qaleriya-bloq/bloq/:slug" element={<BlogSingle />} />
+                <Route path="/xidmətlər-və-həller" element={<Services />} />
+                <Route path="/xidmətlər-və-həller/:slug" element={<ServicesSingle />} />
+                <Route path="*" element={<NotFound />} />
+
             </Routes>
         </>
     )

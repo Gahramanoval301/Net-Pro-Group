@@ -4,6 +4,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const NavItem = ({ styles, section, subRoutes = [], to }) => {
+
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -18,8 +19,11 @@ const NavItem = ({ styles, section, subRoutes = [], to }) => {
                 component="a"
                 href={to}
                 sx={{ position: "relative" }} onClick={handleClick} >
-                <Typography variant="body1" color="initial" className={styles.dropbtn}>
-                    <ArrowRightIcon sx={{ position: 'relative', top: 5 }} /> {section}
+                <Typography color="initial" className={styles.dropbtn}>
+                    <ArrowRightIcon sx={{
+                        position: 'relative', top: 5
+                    }} />
+                    {section}
                     {
                         subRoutes.length ? <KeyboardArrowDownIcon sx={{ position: 'relative', top: '5px' }} /> : null
                     }
@@ -42,7 +46,11 @@ const NavItem = ({ styles, section, subRoutes = [], to }) => {
                         {
                             subRoutes.map(({ route, to }, index) => {
                                 return (
-                                    <MenuItem component="a" href={to} key={index}>{route}</MenuItem>
+                                    <MenuItem component="a"
+                                        href={to}
+                                        key={index}>
+                                        {route}
+                                    </MenuItem>
                                 )
                             })
                         }

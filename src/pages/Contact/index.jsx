@@ -10,32 +10,44 @@ import styles from './style.module.css'
 const Contact = () => {
     return (
         <div>
-            <PageContainer bannerTitle="Əlaqə" titleHref="contact">
-                <Container sx={{ py: 4 }}>
+            <PageContainer bannerTitle="Əlaqə" titleHref="əlaqə">
+                <Container sx={{ py: 4 }} className={styles.container}>
                     <Grid container>
                         <Grid item sx={12} sm={5}>
-                            <Stack justifyContent={'space-evenly'} spacing={3} sx={{ height:'90%'}}>
-                                <Card sx={{ maxWidth: 345, padding: '15px' }}>
+                            <Stack justifyContent={'space-evenly'}
+                                spacing={3} sx={{ height: '90%' }}>
+                                <Card sx={{
+                                    maxWidth: 345, padding: '15px'
+                                }}>
                                     <CardContent>
-                                        <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '20px' }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: 'primary.main' }}>
+                                        <Stack flexDirection={'row'}
+                                            flexWrap={'wrap'}
+                                            sx={{ gap: '20px' }}>
+                                            <Box className={styles.iconDiv}
+                                                sx={{
+                                                    backgroundColor: 'primary.main'
+                                                }}>
                                                 <LocationOnIcon color='info' />
                                             </Box>
                                             <Box className={styles.locationText}>
-                                                <Typography gutterBottom variant="h5" component="div" color={'primary'}>
-                                                    Ünvan                                            </Typography>
+                                                <Typography gutterBottom variant="h5"
+                                                    component="h5"
+                                                    color={'primary'}>
+                                                    Ünvan
+                                                </Typography>
                                                 <Typography variant="body2" color={'primary'}>
-                                                    Fəzail Bayramov küç., 1156, Xətai ray., Bakı, Azərbaycan, AZ1025                                            </Typography>
+                                                    Fəzail Bayramov küç., 1156, Xətai ray., Bakı, Azərbaycan, AZ1025
+                                                </Typography>
                                             </Box>
                                         </Stack>
                                     </CardContent>
                                 </Card>
-
                                 <Card sx={{ maxWidth: 345, padding: '15px' }}>
-
                                     <CardContent>
                                         <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '20px' }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: 'primary.main' }}>
+                                            <Box className={styles.iconDiv} sx={{
+                                                backgroundColor: 'primary.main'
+                                            }}>
                                                 <PhoneIcon color='info' />
                                             </Box>
                                             <Box>
@@ -55,15 +67,18 @@ const Contact = () => {
                                 <Card sx={{ maxWidth: 345, padding: '15px' }}>
                                     <CardContent>
                                         <Stack flexDirection={'row'} flexWrap={'wrap'} sx={{ gap: '20px' }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: 'primary.main' }}>
+                                            <Box className={styles.iconDiv} sx={{ backgroundColor: 'primary.main' }}>
                                                 <EmailIcon color='info' />
                                             </Box>
                                             <Box>
-                                                <Typography gutterBottom variant="h5" component="div" color={'primary'}>
+                                                <Typography gutterBottom variant="h5"
+                                                    component="h5"
+                                                    color={'primary'}>
                                                     Email
                                                 </Typography>
                                                 <Typography variant="body2" color={'primary'}>
-                                                    info@netprogroup.az                                                    </Typography>
+                                                    info@netprogroup.az
+                                                </Typography>
                                             </Box>
                                         </Stack>
 
@@ -73,7 +88,10 @@ const Contact = () => {
 
                         </Grid>
                         <Grid item xs={12} sm={7}>
-                            <Stack textAlign={'center'} flexWrap={'wrap'} justifyContent={'space-around'} spacing={2}>
+                            <Stack textAlign={'center'}
+                                flexWrap={'wrap'}
+                                justifyContent={'space-around'}
+                                spacing={2}>
                                 <ContactForm />
                             </Stack>
                         </Grid>
@@ -85,7 +103,6 @@ const Contact = () => {
                     marginTop: 30,
                     minHeight: '70vh'
                 }} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.5964001322254!2d49.90569791173867!3d40.417790971320315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030635c979bcb1d%3A0xfa39683687982543!2sJED%20Academy%20Koroglu!5e0!3m2!1sen!2saz!4v1701328081704!5m2!1sen!2saz" aloading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
             </PageContainer>
         </div >
     )

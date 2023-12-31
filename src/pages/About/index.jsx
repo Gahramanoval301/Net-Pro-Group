@@ -5,7 +5,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 const About = () => {
 
     return (
-        <PageContainer bannerTitle='Haqqımızda' titleHref='about'>
+        <PageContainer bannerTitle='Haqqımızda' titleHref='haqqımızda'>
             <Container>
                 <Grid container py={6} spacing={2}>
                     <Grid item xs={12} md={6}
@@ -15,7 +15,9 @@ const About = () => {
                         }}
                     >
                         <Box sx={{ maxWidth: "500px !important" }}>
-                            <img style={{ width: '100%', borderRadius: 10 }} src='/zdanie.png' />
+                            <img style={{
+                                width: '100%', borderRadius: 10
+                            }} src='/zdanie.png' />
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
@@ -38,7 +40,9 @@ const About = () => {
                         }}
                     >
                         <Box sx={{ maxWidth: "500px !important" }}>
-                            <img style={{ width: '100%', borderRadius: 10 }} src='/zdanie.png' />
+                            <img style={{
+                                width: '100%', borderRadius: 10
+                            }} src='/zdanie.png' />
                         </Box>
                     </Grid>
                 </Grid>

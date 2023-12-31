@@ -5,8 +5,6 @@ import Select from '@mui/material/Select';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import MailIcon from '@mui/icons-material/Mail';
@@ -18,13 +16,9 @@ import Navigation from "../../components/Navigation"
 import Container from '@mui/material/Container';
 import { Stack } from '@mui/material';
 import { ArrowDownward } from '@mui/icons-material';
-
-
-
+import styles from './index.module.css';
 
 export function Header() {
-
-
     const [money, setMoney] = React.useState('');
     const [country, setCountry] = React.useState('');
 
@@ -35,8 +29,7 @@ export function Header() {
         setCountry(e.target.value);
     };
     return (
-
-        <Box sx={{ flexGrow: 1, textAlign: 'center', position: 'sticky', top: 0, zIndex: 1000 }} >
+        <Box className={styles.containerBox} >
             <AppBar position="static"
                 sx={{
                     ".MuiToolbar-root": {
@@ -54,7 +47,7 @@ export function Header() {
                         </a>
                     </Box>
                     <Box>
-                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap:'wrap' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
                             < WhatsAppIcon sx={{ marginRight: 1 }} />
                             <a href="tel:+994505754080" style={{ color: 'white', textDecoration: 'none', marginRight: 10 }}>+994505754080</a>
                             <a href="tel:+994505754070" style={{ color: 'white', textDecoration: 'none' }}>+994505754070</a>
