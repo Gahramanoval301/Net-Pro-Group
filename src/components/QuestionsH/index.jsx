@@ -5,7 +5,7 @@ import ContactForm from '../ContactForm'
 const QuestionsH = () => {
     return (
         <Box sx={{
-            backgroundImage: `url('public/FormHomeBg.png')`,
+            backgroundImage: `url('/FormHomeBg.png')`,
             backgroundSize: 'cover',
             py: 4
         }}>

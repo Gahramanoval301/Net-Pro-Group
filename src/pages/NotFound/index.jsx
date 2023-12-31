@@ -14,7 +14,7 @@ const NotFound = () => {
                         <Grid item xs={12} md={6}>
                             <Stack spacing={2} alignItems={'center'} justifyContent={'center'} sx={{ textAlign: 'center' }}>
                                 <Box sx={{}}>
-                                    <img src="public/NotFoundImages/404.svg" alt="404 not found" />
+                                    <img src="/NotFoundImages/404.svg" alt="404 not found" />
                                 </Box>
                                 <Typography color="primary" variant='h5' sx={{width:'50%'}}>
                                     Axtardığınız Səhifə Tapılmadı!
@@ -27,7 +27,7 @@ const NotFound = () => {
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Stack className={styles.imageBox} alignItems={'center'} >
-                                <img src="public/NotFoundImages/error.png" alt="error" width={'100%'} />
+                                <img src="/NotFoundImages/error.png" alt="error" width={'100%'} />
                             </Stack>
                         </Grid>
                     </Grid>

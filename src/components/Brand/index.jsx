@@ -20,7 +20,7 @@ export const Brands = () => {
             sx={{
                 backgroundPosition: 'cover', position: 'relative', padding: '1.5rem 0'
             }} >
-            <img src='../../../public/brandsHome/bgBrands.png' alt="img" style={{
+            <img src='../../..//brandsHome/bgBrands.png' alt="img" style={{
                 opacity: '0.3',
                 position: 'absolute',
                 left: 0,
@@ -59,23 +59,23 @@ export const Brands = () => {
                         >
                             <SwiperSlide>
                                 <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
-                                    <Logo image={'../../../public/brandsHome/brandsLogo1.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo2.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo3.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo1.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo2.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo3.png'} />
                                 </Stack>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
-                                    <Logo image={'../../../public/brandsHome/brandsLogo4.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo5.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo6.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo4.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo5.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo6.png'} />
                                 </Stack>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Stack flexDirection={'row'} flexWrap={'wrap'} className={styles.brands} >
-                                    <Logo image={'../../../public/brandsHome/brandsLogo7.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo8.png'} />
-                                    <Logo image={'../../../public/brandsHome/brandsLogo9.webp'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo7.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo8.png'} />
+                                    <Logo image={'../../..//brandsHome/brandsLogo9.webp'} />
                                 </Stack>
                             </SwiperSlide>
                         </Swiper>
