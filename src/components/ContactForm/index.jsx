@@ -52,7 +52,7 @@ const ContactForm = ({ side = 'left' }) => {
                 <Typography color="primary" >
                     Formu doldurun. Yaxın zamanda sizinlə əlaqə saxlayacayıq.
                 </Typography>
-                <form onSubmit={formik.handleSubmit}>
+                <form onSubmit={formik.handleSubmit} id="contact-info" name="contact-info">
                     <Stack
                         gap={3}
                         flexDirection="row"
@@ -62,7 +62,7 @@ const ContactForm = ({ side = 'left' }) => {
                                 flex: 1
                             },
                             "& input, & textarea": {
-                                minWidth: 280
+                                minWidth: 200
                             }
                         }}
                     >
