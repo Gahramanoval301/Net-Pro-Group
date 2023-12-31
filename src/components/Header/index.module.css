@@ -5,3 +5,26 @@
   top: 0;
   z-index: 1000;
 }
+.containerBox .dropdown {
+  display: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  color: #435072;
+}
+.containerBox .informations {
+  display: flex ;
+}
+@media screen and (max-width: 600px) {
+  .containerBox .dropdown {
+    display: block;
+  }
+  .containerBox a {
+    font-size: 16px;
+  }
+  .containerBox .informations {
+    display: none;
+  }
+}
