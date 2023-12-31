@@ -83,7 +83,12 @@ export const Brands = () => {
                             <style>
                                 {`
                          .brands-swiper .swiper-slide.swiper-slide-active{
-                            min-height:15vh !important;
+                            min-height:15vh;
+                        }
+                        @media screen and (max-width: 762px){
+                            .brands-swiper .swiper-slide.swiper-slide-active{
+                                min-height:35vh;
+                            }
                         }
                          
                       .brands-swiper .swiper-pagination *{
