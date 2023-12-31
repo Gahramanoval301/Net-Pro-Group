@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { ArrowLeft, ArrowRight } from '@mui/icons-material';
-import { Box, Button, Stack, Container } from '@mui/material';
+import { Box, Button, Stack } from '@mui/material';
 import { Navigation, Pagination } from 'swiper/modules';
 import { HomeSlides } from './HomeSlides.jsx'
 
@@ -65,7 +65,6 @@ export default function SwiperComponent() {
                     },
                     clickable: true
                 }}
-
                 navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
