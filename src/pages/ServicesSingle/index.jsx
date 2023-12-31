@@ -16,9 +16,9 @@ const ServicesSingle = () => {
 
     return (
         <PageContainer bannerTitle='Xidmətlər və Həllər'
-         titleHref='xidmətlər-və-həllər' 
-         slugTitle={service.title}
-          slug={service.slug}>
+            titleHref='xidmətlər-və-həllər'
+            slugTitle={service.title}
+            slug={service.slug}>
             <Container sx={{ py: 5 }}>
                 <Grid container spacing={3}>
                     <Grid item xs={12} md={4}>
@@ -117,7 +117,6 @@ const ServicesSingle = () => {
                 </Grid>
             </Container >
         </PageContainer>
-
     )
 }
 

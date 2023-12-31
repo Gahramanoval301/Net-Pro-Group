@@ -5,7 +5,6 @@ import styles from './index.module.css'
 import { ArrowLeft } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
-
 const NotFound = () => {
     return (
         <PageContainer>

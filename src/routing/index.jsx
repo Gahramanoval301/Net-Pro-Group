@@ -14,20 +14,17 @@ import NotFound from "../pages/NotFound"
 
 const WebRouting = () => {
     return (
-        <>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/haqqımızda" element={<About />} />
-                <Route path="/əlaqə" element={<Contact />} />
-                <Route path="/məhsullar/:slug" element={<ProductSingle />} />
-                <Route path="/qaleriya-bloq" element={<GalleryBlog />} />
-                <Route path="/qaleriya-bloq/bloq/:slug" element={<BlogSingle />} />
-                <Route path="/xidmətlər-və-həllər" element={<Services />} />
-                <Route path="/xidmətlər-və-həllər/:slug" element={<ServicesSingle />} />
-                <Route path="*" element={<NotFound />} />
-
-            </Routes>
-        </>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/haqqımızda" element={<About />} />
+            <Route path="/əlaqə" element={<Contact />} />
+            <Route path="/məhsullar/:slug" element={<ProductSingle />} />
+            <Route path="/qaleriya-bloq" element={<GalleryBlog />} />
+            <Route path="/qaleriya-bloq/bloq/:slug" element={<BlogSingle />} />
+            <Route path="/xidmətlər-və-həllər" element={<Services />} />
+            <Route path="/xidmətlər-və-həllər/:slug" element={<ServicesSingle />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
     )
 }
 export default WebRouting

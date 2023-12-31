@@ -3,7 +3,6 @@ import PageContainer from '../../components/PageContainer'
 import { Box, Container, Grid, Typography } from '@mui/material'
 
 const About = () => {
-
     return (
         <PageContainer bannerTitle='Haqqımızda' titleHref='haqqımızda'>
             <Container>

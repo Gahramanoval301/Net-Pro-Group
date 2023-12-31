@@ -30,6 +30,5 @@ const theme = createTheme({
             light: '#FFFFFF'
         },
     },
-    
 })
 export default theme;

@@ -4,7 +4,6 @@ import { Box, Container, Grid, Typography, Stack } from "@mui/material"
 import services from '../../mockData/services'
 import ServiceCard from '../../components/ServiceCard'
 
-
 const Services = () => {
     return (
         <PageContainer bannerTitle='Xidmətlər və Həllər' titleHref='xidmətlər-və-həllər'>

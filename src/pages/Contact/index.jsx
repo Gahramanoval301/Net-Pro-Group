@@ -85,7 +85,6 @@ const Contact = () => {
                                     </CardContent>
                                 </Card>
                             </Stack>
-
                         </Grid>
                         <Grid item xs={12} sm={7}>
                             <Stack textAlign={'center'}

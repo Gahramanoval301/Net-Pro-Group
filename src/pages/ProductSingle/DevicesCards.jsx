@@ -4,6 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import styles from './index.module.css'
+
 const DevicesCards = ({ name, body, image }) => {
     return (
         <Card sx={{

@@ -14,7 +14,6 @@ const GalleryBlog = () => {
                 </Stack>
             </Container>
         </PageContainer>
-
     )
 }
 

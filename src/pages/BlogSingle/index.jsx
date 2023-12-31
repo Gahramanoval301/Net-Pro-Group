@@ -12,7 +12,7 @@ import Breadcumb from '../../components/Breadcumb';
 const BlogSingle = () => {
     const { slug } = useParams()
     const item = services.find(({ title }) => slug === title)
-
+    
     return (
         <PageContainer bannerTitle='Qalereya və Bloq'>
             <Container>
