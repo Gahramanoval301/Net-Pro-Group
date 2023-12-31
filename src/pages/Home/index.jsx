@@ -8,9 +8,8 @@ import HomeCustomers from "../../components/HomeCustomers"
 import ProducsSwiper from '../../components/ProductsSwiper'
 import { Brands } from "../../components/Brand"
 import Footer from "../../components/Footer"
-import Gallery from "../../components/Gallery"
-import ContactForm from "../../components/ContactForm"
 import QuestionsH from "../../components/QuestionsH"
+import HomeGallery from "../../components/HomeGallery"
 
 const Home = () => {
     return (
@@ -68,8 +67,8 @@ const Home = () => {
                 <br />
             </Box>
             <Brands />
-            <Gallery />
-            <QuestionsH/>
+            <HomeGallery />
+            <QuestionsH />
             <Footer />
         </>
     )
